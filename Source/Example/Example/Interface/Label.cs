@@ -54,7 +54,7 @@ namespace Example.Interface
         public Label()
         {
             this.Text = "";
-            this.font = AlmiranteEngine.Resources.LoadSync<BitmapFont>("Fonts\\Font");
+            this.font = AlmiranteEngine.Resources.LoadSync<BitmapFont>("Fonts\\Pixel16");
             this.Color = Color.White;
             this.Alignment = BitmapFontAlignment.Left;
         }

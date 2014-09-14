@@ -47,11 +47,6 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Fonts\Regen.spritefont">
-      <Name>Regen</Name>
-      <Importer>FontDescriptionImporter</Importer>
-      <Processor>FontDescriptionProcessor</Processor>
-    </Compile>
     <None Include="Fonts\Font.png">
       <Name>Font</Name>
       <Importer>TextureImporter</Importer>
@@ -61,6 +56,16 @@
       <Name>Textbox</Name>
       <Importer>FontDescriptionImporter</Importer>
       <Processor>FontDescriptionProcessor</Processor>
+    </Compile>
+    <Compile Include="Fonts\Pixel16.bitmapfont">
+      <Name>Pixel16</Name>
+      <Importer>BitmapFontImporter</Importer>
+      <Processor>BitmapFontProcessor</Processor>
+    </Compile>
+    <Compile Include="Fonts\Pixel8.bitmapfont">
+      <Name>Pixel8</Name>
+      <Importer>BitmapFontImporter</Importer>
+      <Processor>BitmapFontProcessor</Processor>
     </Compile>
   </ItemGroup>
   <ItemGroup>
@@ -100,6 +105,18 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
     </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Fonts\Pixel16.png">
+      <Name>Pixel16</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </None>
+    <None Include="Fonts\Pixel8.png">
+      <Name>Pixel8</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </None>
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Microsoft\XNA Game Studio\$(XnaFrameworkVersion)\Microsoft.Xna.GameStudio.ContentPipeline.targets" />
   <!--  To modify your build process, add your task inside one of the targets below and uncomment it. 

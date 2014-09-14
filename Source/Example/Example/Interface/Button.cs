@@ -52,7 +52,7 @@ namespace Example.Interface
             var device = AlmiranteEngine.Device;
             this.texture = new Texture2D(device, 1, 1);
             this.texture.SetData(new Color[] { Color.FromNonPremultiplied(128, 128, 128, 255) });
-            this.font = AlmiranteEngine.Resources.LoadSync<BitmapFont>("Fonts\\Font");
+            this.font = AlmiranteEngine.Resources.LoadSync<BitmapFont>("Fonts\\Pixel16");
             this.color = Color.White * 0.5f;
         }
 

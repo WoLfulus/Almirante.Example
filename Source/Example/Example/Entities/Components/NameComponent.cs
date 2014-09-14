@@ -63,7 +63,7 @@ namespace Example.Entities.Components
             // We must check if font is loaded, because we requests it asynchronously.
             if (this.font.Loaded) 
             {
-                batch.DrawFont(this.font.Content, new Vector2(this.position.X, this.position.Y + 2), BitmapFontAlignment.Center, this.Color, this.Text);
+                batch.DrawFont(this.font.Content, new Vector2(this.position.X, this.position.Y + 13), BitmapFontAlignment.Center, this.Color, this.Text);
             }
         }
 
@@ -72,7 +72,7 @@ namespace Example.Entities.Components
         /// </summary>
         public override void OnCreate()
         {
-            this.font = AlmiranteEngine.Resources.LoadAsync<BitmapFont>("Fonts\\Font"); 
+            this.font = AlmiranteEngine.Resources.LoadAsync<BitmapFont>("Fonts\\Pixel8"); 
         }
 
         /// <summary>

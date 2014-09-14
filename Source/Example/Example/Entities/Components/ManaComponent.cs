@@ -49,8 +49,8 @@ namespace Example.Entities.Components
         /// <summary>
         /// Bar size
         /// </summary>
-        private const int BarSize = 40;
-        private const int DrawOffset = 30;
+        private const int BarSize = 30;
+        private const int DrawOffset = 10;
 
         /// <summary>
         /// Creation

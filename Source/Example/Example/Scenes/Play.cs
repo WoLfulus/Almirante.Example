@@ -70,11 +70,11 @@ namespace Example.Scenes
 
             // Creates the player with tag "player" so the systems can find the entity
             this.player = this.entities.Create<Player>("player");
-            this.player.Name.Text = "Você";
+            this.player.Name.Text = "você";
             this.player.Name.Color = Color.White;
-            this.player.Health.Value = 80;
+            this.player.Health.Value = 30;
             this.player.Health.Maximum = 100;
-            this.player.Mana.Value = 25;
+            this.player.Mana.Value = 10;
             this.player.Mana.Maximum = 100;
             this.player.Visual.File = "Characters\\Player";
             this.player.Position.X = 0;
