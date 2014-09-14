@@ -1,0 +1,5 @@
+*.suo
+/Source/Example/Example/bin
+/Source/Example/Example/obj
+/Source/Example/ExampleContent/obj
+/Source/Example/ExampleContent/bin

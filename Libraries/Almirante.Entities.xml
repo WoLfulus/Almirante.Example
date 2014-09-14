@@ -1,0 +1,1067 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Almirante.Entities</name>
+    </assembly>
+    <members>
+        <member name="T:Almirante.Entities.Components.Attributes.ComponentReferenceAttribute">
+            <summary>
+            TODO: Update summary.
+            </summary>
+        </member>
+        <member name="T:Almirante.Entities.Components.Component">
+            <summary>
+            Component class.
+            </summary>
+        </member>
+        <member name="M:Almirante.Entities.Components.Component.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Almirante.Entities.Components.Component"/> class.
+            </summary>
+        </member>
+        <member name="M:Almirante.Entities.Components.Component.Create">
+            <summary>
+            Initializes the component.
+            </summary>
+        </member>
+        <member name="M:Almirante.Entities.Components.Component.Destroy">
+            <summary>
+            Destroys the component.
+            </summary>
+        </member>
+        <member name="M:Almirante.Entities.Components.Component.OnCreate">
+            <summary>
+            Called when component is being created.
+            </summary>
+        </member>
+        <member name="M:Almirante.Entities.Components.Component.OnDestroy">
+            <summary>
+            Called when component gets destroyed.
+            </summary>
+        </member>
+        <member name="P:Almirante.Entities.Components.Component.Type">
+            <summary>
+            Gets the component info information.
+            </summary>
+        </member>
+        <member name="P:Almirante.Entities.Components.Component.Owner">
+            <summary>
+            Gets the owner of this component instance.
+            </summary>
+        </member>
+        <member name="T:Almirante.Entities.Components.ComponentHelper">
+            <summary>
+            Component info class.
+            </summary>
+        </member>
+        <member name="T:Almirante.Entities.Types.TypeManager`1">
+            <summary>
+            Component info class.
+            </summary>
+            <typeparam name="T">Type to manage.</typeparam>
+        </member>
+        <member name="F:Almirante.Entities.Types.TypeManager`1.locker">
+            <summary>
+            Locking object.
+            </summary>
+        </member>
+        <member name="F:Almirante.Entities.Types.TypeManager`1.nextBit">
+            <summary>
+            Next component info bit.
+            </summary>
+        </member>
+        <member name="F:Almirante.Entities.Types.TypeManager`1.nextId">
+            <summary>
+            Next component id.
+            </summary>
+        </member>
+        <member name="F:Almirante.Entities.Types.TypeManager`1.componentTypes">
+            <summary>
+            Component types holder.
+            </summary>
+        </member>
+        <member name="M:Almirante.Entities.Types.TypeManager`1.#ctor">
+            <summary>
+            Blocks creation of instances.
+            </summary>
+        </member>
+        <member name="M:Almirante.Entities.Types.TypeManager`1.GetInfo(System.Type)">
+            <summary>
+            Gets a component info information.
+            </summary>
+            <param name="type">The requested type.</param>
+            <returns>
+            Type information of the component.
+            </returns>
+        </member>
+        <member name="P:Almirante.Entities.Types.TypeManager`1.Count">
+            <summary>
+            Gets the current count of registered types.
+            </summary>
+        </member>
+        <member name="F:Almirante.Entities.Components.ComponentHelper.componentRefs">
+            <summary>
+            Component properties by type.
+            </summary>
+        </member>
+        <member name="F:Almirante.Entities.Components.ComponentHelper.componentCtors">
+            <summary>
+            Component properties by type.
+            </summary>
+        </member>
+        <member name="F:Almirante.Entities.Components.ComponentHelper.componentSetters">
+            <summary>
+            Component properties by type.
+            </summary>
+        </member>
+        <member name="M:Almirante.Entities.Components.ComponentHelper.GetPropertySetter(System.Reflection.PropertyInfo)">
+            <summary>
+            Gets the "compiled" property setter for storing.
+            </summary>
+            <param name="propertyInfo"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Almirante.Entities.Components.ComponentHelper.GetFieldSetter(System.Reflection.FieldInfo)">
+            <summary>
+            Gets the "compiled" property setter for storing.
+            </summary>
+            <param name="fieldInfo"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Almirante.Entities.Components.ComponentHelper.GetConstructor(System.Type)">
+            <summary>
+            Gets the "compiled" property setter for storing.
+            </summary>
+            <param name="type">The type.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Almirante.Entities.Components.ComponentHelper.CreateInstance(System.Type)">
+            <summary>
+            Creates an instance of a component.
+            </summary>
+            <param name="type"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Almirante.Entities.Components.ComponentHelper.CreateComponents(Almirante.Entities.Entity)">
+            <summary>
+            Creates the component instances for the specified entity
+            </summary>
+            <param name="entity"></param>
+        </member>
+        <member name="T:Almirante.Entities.Components.ComponentReference">
+            <summary>
+            Component reference cache.
+            </summary>
+        </member>
+        <member name="T:Almirante.Entities.Components.ComponentSetter">
+            <summary>
+            Component setter cache.
+            </summary>
+        </member>
+        <member name="T:Almirante.Entities.Components.PositionComponent">
+            <summary>
+            Position component.
+            </summary>
+        </member>
+        <member name="M:Almirante.Entities.Components.PositionComponent.Set(System.Single,System.Single)">
+            <summary>
+            Sets the specified x.
+            </summary>
+            <param name="x">The x.</param>
+            <param name="y">The y.</param>
+        </member>
+        <member name="P:Almirante.Entities.Components.PositionComponent.X">
+            <summary>
+            Gets or sets the entity's position x.
+            </summary>
+        </member>
+        <member name="P:Almirante.Entities.Components.PositionComponent.Y">
+            <summary>
+            Gets or sets the entity's position x.
+            </summary>
+        </member>
+        <member name="T:Almirante.Entities.Filters.Rules.IsRule">
+            <summary>
+            Matches the info for the entity.
+            </summary>
+        </member>
+        <member name="T:Almirante.Entities.Filters.Rules.Rule">
+            <summary>
+            Filtering rule interface.
+            </summary>
+        </member>
+        <member name="M:Almirante.Entities.Filters.Rules.Rule.Apply(Almirante.Entities.Entity)">
+            <summary>
+            Applies the filter rule to the entity.
+            </summary>
+            <param name="entity">The entity.</param>
+            <returns>
+            True if the rule is applied successfully.
+            </returns>
+        </member>
+        <member name="F:Almirante.Entities.Filters.Rules.IsRule.type">
+            <summary>
+            Type to check against.
+            </summary>
+        </member>
+        <member name="M:Almirante.Entities.Filters.Rules.IsRule.#ctor(System.Type)">
+            <summary>
+            Constructs a new rule instance.
+            </summary>
+            <param name="type">Type</param>
+            <exception cref="T:System.Exception">Invalid entity type on filter ( + type.Name + )</exception>
+        </member>
+        <member name="M:Almirante.Entities.Filters.Rules.IsRule.Apply(Almirante.Entities.Entity)">
+            <summary>
+            Applies the rule to an entity.
+            </summary>
+            <param name="entity">Entity instance.</param>
+            <returns>
+            True if not break.
+            </returns>
+        </member>
+        <member name="T:Almirante.Entities.Filters.Rules.IsAnyRule">
+            <summary>
+            Matches the info for the entity.
+            </summary>
+        </member>
+        <member name="F:Almirante.Entities.Filters.Rules.IsAnyRule.types">
+            <summary>
+            Type to check against.
+            </summary>
+        </member>
+        <member name="M:Almirante.Entities.Filters.Rules.IsAnyRule.#ctor(System.Type[])">
+            <summary>
+            Constructs a new rule instance.
+            </summary>
+            <param name="types">The types.</param>
+            <exception cref="T:System.Exception">Invalid entity type on filter ( + type.Name + )</exception>
+        </member>
+        <member name="M:Almirante.Entities.Filters.Rules.IsAnyRule.Apply(Almirante.Entities.Entity)">
+            <summary>
+            Applies the rule to an entity.
+            </summary>
+            <param name="entity">Entity instance.</param>
+            <returns>
+            True if not break.
+            </returns>
+        </member>
+        <member name="T:Almirante.Entities.Filters.Rules.IsNotRule">
+            <summary>
+            Matches the info for the entity.
+            </summary>
+        </member>
+        <member name="F:Almirante.Entities.Filters.Rules.IsNotRule.types">
+            <summary>
+            Type to check against.
+            </summary>
+        </member>
+        <member name="M:Almirante.Entities.Filters.Rules.IsNotRule.#ctor(System.Type[])">
+            <summary>
+            Constructs a new rule instance.
+            </summary>
+            <param name="types">The types.</param>
+            <exception cref="T:System.Exception">Invalid entity type on filter ( + type.Name + )</exception>
+        </member>
+        <member name="M:Almirante.Entities.Filters.Rules.IsNotRule.Apply(Almirante.Entities.Entity)">
+            <summary>
+            Applies the rule to an entity.
+            </summary>
+            <param name="entity">Entity instance.</param>
+            <returns>
+            True if not break.
+            </returns>
+        </member>
+        <member name="T:Almirante.Entities.Filters.Rules.HasRule">
+            <summary>
+            Matches all components for the entity.
+            </summary>
+        </member>
+        <member name="F:Almirante.Entities.Filters.Rules.HasRule.mask">
+            <summary>
+            Type to check against.
+            </summary>
+        </member>
+        <member name="M:Almirante.Entities.Filters.Rules.HasRule.#ctor(System.Type[])">
+            <summary>
+            Constructs a new rule instance.
+            </summary>
+            <param name="types">Type list</param>
+            <exception cref="T:System.Exception">Invalid component type in filter.</exception>
+        </member>
+        <member name="M:Almirante.Entities.Filters.Rules.HasRule.Apply(Almirante.Entities.Entity)">
+            <summary>
+            Applies the rule to an entity.
+            </summary>
+            <param name="entity">Entity instance.</param>
+            <returns>
+            True if not break.
+            </returns>
+        </member>
+        <member name="T:Almirante.Entities.Filters.Rules.HasAnyRule">
+            <summary>
+            Matches at least one info for the entity.
+            </summary>
+        </member>
+        <member name="F:Almirante.Entities.Filters.Rules.HasAnyRule.mask">
+            <summary>
+            Type to check against.
+            </summary>
+        </member>
+        <member name="M:Almirante.Entities.Filters.Rules.HasAnyRule.#ctor(System.Type[])">
+            <summary>
+            Constructs a new rule instance.
+            </summary>
+            <param name="types">Type list</param>
+            <exception cref="T:System.Exception">Invalid component type in filter.</exception>
+        </member>
+        <member name="M:Almirante.Entities.Filters.Rules.HasAnyRule.Apply(Almirante.Entities.Entity)">
+            <summary>
+            Applies the rule to an entity.
+            </summary>
+            <param name="entity">Entity instance.</param>
+            <returns>
+            True if not break.
+            </returns>
+        </member>
+        <member name="T:Almirante.Entities.Filters.Rules.HasNotRule">
+            <summary>
+            Matches at least one info for the entity.
+            </summary>
+        </member>
+        <member name="F:Almirante.Entities.Filters.Rules.HasNotRule.mask">
+            <summary>
+            Type to check against.
+            </summary>
+        </member>
+        <member name="M:Almirante.Entities.Filters.Rules.HasNotRule.#ctor(System.Type[])">
+            <summary>
+            Constructs a new rule instance.
+            </summary>
+            <param name="types">Type list</param>
+            <exception cref="T:System.Exception">Invalid component type in filter.</exception>
+        </member>
+        <member name="M:Almirante.Entities.Filters.Rules.HasNotRule.Apply(Almirante.Entities.Entity)">
+            <summary>
+            Applies the rule to an entity.
+            </summary>
+            <param name="entity">Entity instance.</param>
+            <returns>
+            True if not break.
+            </returns>
+        </member>
+        <member name="T:Almirante.Entities.Filters.Rules.TaggedRule">
+            <summary>
+            Matches all the specified tag.
+            </summary>
+        </member>
+        <member name="F:Almirante.Entities.Filters.Rules.TaggedRule.tag">
+            <summary>
+            Type to check against.
+            </summary>
+        </member>
+        <member name="M:Almirante.Entities.Filters.Rules.TaggedRule.#ctor(System.String)">
+            <summary>
+            Constructs a new rule instance.
+            </summary>
+            <param name="tag">The tag.</param>
+            <exception cref="T:System.Exception">Invalid component type in filter.</exception>
+        </member>
+        <member name="M:Almirante.Entities.Filters.Rules.TaggedRule.Apply(Almirante.Entities.Entity)">
+            <summary>
+            Applies the rule to an entity.
+            </summary>
+            <param name="entity">Entity instance.</param>
+            <returns>
+            True if not break.
+            </returns>
+        </member>
+        <member name="T:Almirante.Entities.Filters.Rules.GroupRule">
+            <summary>
+            Matches the specified group.
+            </summary>
+        </member>
+        <member name="F:Almirante.Entities.Filters.Rules.GroupRule.group">
+            <summary>
+            Type to check against.
+            </summary>
+        </member>
+        <member name="M:Almirante.Entities.Filters.Rules.GroupRule.#ctor(System.String)">
+            <summary>
+            Constructs a new rule instance.
+            </summary>
+            <param name="group">The group.</param>
+            <exception cref="T:System.Exception">Invalid component type in filter.</exception>
+        </member>
+        <member name="M:Almirante.Entities.Filters.Rules.GroupRule.Apply(Almirante.Entities.Entity)">
+            <summary>
+            Applies the rule to an entity.
+            </summary>
+            <param name="entity">Entity instance.</param>
+            <returns>
+            True if not break.
+            </returns>
+        </member>
+        <member name="T:Almirante.Entities.Systems.SystemHelper">
+            <summary>
+            System helper class.
+            </summary>
+        </member>
+        <member name="T:Almirante.Entities.Systems.SystemManager">
+            <summary>
+            System management class.
+            </summary>
+        </member>
+        <member name="F:Almirante.Entities.Systems.SystemManager.entities">
+            <summary>
+            Entity manager instance.
+            </summary>
+        </member>
+        <member name="F:Almirante.Entities.Systems.SystemManager.systems">
+            <summary>
+            Stores a list of systems.
+            </summary>
+        </member>
+        <member name="M:Almirante.Entities.Systems.SystemManager.#ctor(Almirante.Entities.EntityManager)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Almirante.Entities.Systems.SystemManager"/> class.
+            </summary>
+            <param name="manager">The manager.</param>
+        </member>
+        <member name="M:Almirante.Entities.Systems.SystemManager.Add``1">
+            <summary>
+            Adds a new system to the manager.
+            </summary>
+            <typeparam name="T">System type.</typeparam>
+        </member>
+        <member name="M:Almirante.Entities.Systems.SystemManager.Add(Almirante.Entities.Systems.EntitySystem)">
+            <summary>
+            Adds a new system to the manager.
+            </summary>
+            <param name="system">System instance.</param>
+        </member>
+        <member name="M:Almirante.Entities.Systems.SystemManager.Get``1">
+            <summary>
+            Gets a system from the manager.
+            </summary>
+            <typeparam name="T">System type.</typeparam>
+            <returns></returns>
+        </member>
+        <member name="M:Almirante.Entities.Systems.SystemManager.GetAll">
+            <summary>
+            Gets all systems from the manager.
+            </summary>
+            <returns>List with all systems.</returns>
+        </member>
+        <member name="M:Almirante.Entities.Systems.SystemManager.Remove``1">
+            <summary>
+            Remove a specific system from the manager.
+            </summary>
+            <typeparam name="T">System type.</typeparam>
+        </member>
+        <member name="M:Almirante.Entities.Systems.SystemManager.Remove(System.UInt64)">
+            <summary>
+            Removes the system.
+            </summary>
+            <param name="id">The id.</param>
+        </member>
+        <member name="M:Almirante.Entities.Systems.SystemManager.RegisterEntity(Almirante.Entities.Entity)">
+            <summary>
+            Adds an entity to the systems.
+            </summary>
+            <param name="entity">Entity instance,</param>
+        </member>
+        <member name="M:Almirante.Entities.Systems.SystemManager.RemoveEntity(Almirante.Entities.Entity)">
+            <summary>
+            Removes an entity from the systems.
+            </summary>
+            <param name="entity">Entity instance.</param>
+        </member>
+        <member name="M:Almirante.Entities.Systems.SystemManager.ClearEntities">
+            <summary>
+            Clears all entities from the systems.
+            </summary>
+        </member>
+        <member name="M:Almirante.Entities.Systems.SystemManager.Execute(System.Double)">
+            <summary>
+            Executes the registered systems.
+            </summary>
+        </member>
+        <member name="T:Almirante.Entities.Systems.EntityProcessor">
+            <summary>
+            Entity processor class.
+            </summary>
+        </member>
+        <member name="T:Almirante.Entities.Systems.EntitySystem">
+            <summary>
+            Entity system class.
+            </summary>
+        </member>
+        <member name="F:Almirante.Entities.Systems.EntitySystem.manager">
+            <summary>
+            System manager instance.
+            </summary>
+        </member>
+        <member name="M:Almirante.Entities.Systems.EntitySystem.#ctor">
+            <summary>
+            Constructor of the system class.
+            </summary>
+        </member>
+        <member name="M:Almirante.Entities.Systems.EntitySystem.GetEntityById(System.UInt64)">
+            <summary>
+            Gets an entity by its id.
+            </summary>
+            <param name="id">The id.</param>
+            <returns>Entity instance.</returns>
+        </member>
+        <member name="M:Almirante.Entities.Systems.EntitySystem.GetEntityByTag(System.String)">
+            <summary>
+            Gets an entity by its tag name.
+            </summary>
+            <param name="tag">The tag.</param>
+            <returns>Entity instance.</returns>
+        </member>
+        <member name="M:Almirante.Entities.Systems.EntitySystem.GetEntitiesByGroup(System.String)">
+            <summary>
+            Gets all entities that belongs to the specified group.
+            </summary>
+            <param name="group">The group.</param>
+            <returns>Enumeration of the entities.</returns>
+        </member>
+        <member name="M:Almirante.Entities.Systems.EntitySystem.Execute(System.Double)">
+            <summary>
+            Executes the current system.
+            </summary>
+        </member>
+        <member name="M:Almirante.Entities.Systems.EntitySystem.OnExecute(System.Double)">
+            <summary>
+            Called when the system executes.
+            </summary>
+        </member>
+        <member name="M:Almirante.Entities.Systems.EntitySystem.CanExecute(System.Double)">
+            <summary>
+            Checks if the current system can execute.
+            </summary>
+            <returns>
+              <c>true</c> if this instance can execute; otherwise, <c>false</c>.
+            </returns>
+        </member>
+        <member name="P:Almirante.Entities.Systems.EntitySystem.Type">
+            <summary>
+            Gets the type.
+            </summary>
+            <value>
+            The type.
+            </value>
+        </member>
+        <member name="P:Almirante.Entities.Systems.EntitySystem.Systems">
+            <summary>
+            System manager instance.
+            </summary>
+        </member>
+        <member name="F:Almirante.Entities.Systems.EntityProcessor.entities">
+            <summary>
+            Stores all active entities.
+            </summary>
+        </member>
+        <member name="F:Almirante.Entities.Systems.EntityProcessor.filter">
+            <summary>
+            Instance of the entity filtering class.
+            </summary>
+        </member>
+        <member name="M:Almirante.Entities.Systems.EntityProcessor.#ctor(Almirante.Entities.Filters.Filter)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Almirante.Entities.Systems.EntityProcessor"/> class.
+            </summary>
+            <param name="filter">The filter.</param>
+        </member>
+        <member name="M:Almirante.Entities.Systems.EntityProcessor.GetEntities">
+            <summary>
+            Gets the entities that has been filtered by this processor.
+            </summary>
+            <returns>Entity instances.</returns>
+        </member>
+        <member name="M:Almirante.Entities.Systems.EntityProcessor.RegisterEntity(Almirante.Entities.Entity)">
+            <summary>
+            Applies the system filter to an entity and adds to the system if succeed.
+            </summary>
+            <param name="entity">Entity instance.</param>
+            <returns>
+            True if not broken.
+            </returns>
+        </member>
+        <member name="M:Almirante.Entities.Systems.EntityProcessor.RemoveEntity(Almirante.Entities.Entity)">
+            <summary>
+            Removes an entity from this system.
+            </summary>
+            <param name="entity">Entity's instance.</param>
+            <returns>
+            True if not broken.
+            </returns>
+        </member>
+        <member name="M:Almirante.Entities.Systems.EntityProcessor.ClearEntities">
+            <summary>
+            Clears all entities from the system.
+            </summary>
+        </member>
+        <member name="M:Almirante.Entities.Systems.EntityProcessor.OnExecute(System.Double)">
+            <summary>
+            Executes the current system.
+            </summary>
+        </member>
+        <member name="M:Almirante.Entities.Systems.EntityProcessor.Process(Almirante.Entities.Entity)">
+            <summary>
+            Processes an entity that matches the system requeriments.
+            </summary>
+            <param name="entity">The entity.</param>
+        </member>
+        <member name="T:Almirante.Entities.Systems.Multithreaded.ParallelEntityProcessor">
+            <summary>
+            Parallel entity processor class.
+            </summary>
+        </member>
+        <member name="M:Almirante.Entities.Systems.Multithreaded.ParallelEntityProcessor.#ctor(Almirante.Entities.Filters.Filter)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Almirante.Entities.Systems.Multithreaded.ParallelEntityProcessor"/> class.
+            </summary>
+            <param name="filter">The filter.</param>
+        </member>
+        <member name="M:Almirante.Entities.Systems.Multithreaded.ParallelEntityProcessor.OnExecute(System.Double)">
+            <summary>
+            Executes the current system.
+            </summary>
+        </member>
+        <member name="T:Almirante.Entities.Types.TypeInfo">
+            <summary>
+            Internal info information class.
+            </summary>
+        </member>
+        <member name="P:Almirante.Entities.Types.TypeInfo.Id">
+            <summary>
+            Internal info id.
+            </summary>
+        </member>
+        <member name="P:Almirante.Entities.Types.TypeInfo.Mask">
+            <summary>
+            Internal info bit.
+            </summary>
+        </member>
+        <member name="T:Almirante.Entities.Components.DrawableComponent">
+            <summary>
+            Drawable component class.
+            </summary>
+        </member>
+        <member name="M:Almirante.Entities.Components.DrawableComponent.Draw">
+            <summary>
+            Draws the component.
+            </summary>
+            <param name="batch">SpriteBatch instance.</param>
+        </member>
+        <member name="P:Almirante.Entities.Components.DrawableComponent.Depth">
+            <summary>
+            Gets or sets the drawing depth.
+            </summary>
+            <value>
+            The depth.
+            </value>
+        </member>
+        <member name="T:Almirante.Entities.Components.Attributes.ComponentAttribute">
+            <summary>
+            Component injection attribute.
+            </summary>
+        </member>
+        <member name="T:Almirante.Entities.Entity">
+            <summary>
+            Entity class.
+            </summary>
+        </member>
+        <member name="F:Almirante.Entities.Entity.None">
+            <summary>
+            Represents an invalid entity (empty).
+            </summary>
+        </member>
+        <member name="F:Almirante.Entities.Entity.components">
+            <summary>
+            Stores the components of this entity.
+            </summary>
+        </member>
+        <member name="F:Almirante.Entities.Entity.drawableComponents">
+            <summary>
+            Stores the components of this entity.
+            </summary>
+        </member>
+        <member name="M:Almirante.Entities.Entity.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Almirante.Entities.Entity"/> class.
+            </summary>
+        </member>
+        <member name="M:Almirante.Entities.Entity.AddComponent(System.Type)">
+            <summary>
+            Adds a component to the entity.
+            </summary>
+            <param name="type">The type of the component.</param>
+            <returns>
+            The component instance.
+            </returns>
+            <exception cref="T:System.Exception">Component already exists.</exception>
+        </member>
+        <member name="M:Almirante.Entities.Entity.HasComponent``1">
+            <summary>
+            Checks if a component exists in the current entity.
+            </summary>
+            <typeparam name="T">Type of the component.</typeparam>
+            <returns>
+              <c>true</c> if this instance has the specified component; otherwise, <c>false</c>.
+            </returns>
+        </member>
+        <member name="M:Almirante.Entities.Entity.HasComponent(System.Type)">
+            <summary>
+            Checks if a component exists in the current entity.
+            </summary>
+            <param name="type">The type.</param>
+            <returns>
+              <c>true</c> if the current entity has the specified component; otherwise, <c>false</c>.
+            </returns>
+        </member>
+        <member name="M:Almirante.Entities.Entity.GetComponent``1">
+            <summary>
+            Gets a component from the entity.
+            </summary>
+            <typeparam name="T">Type of the component.</typeparam>
+            <returns>The component instance.</returns>
+        </member>
+        <member name="M:Almirante.Entities.Entity.GetComponent(System.Type)">
+            <summary>
+            Gets a component from the entity.
+            </summary>
+            <param name="type">The type.</param>
+            <returns>The component instance.</returns>
+        </member>
+        <member name="M:Almirante.Entities.Entity.GetComponents">
+            <summary>
+            Gets a list of components in this entity.
+            </summary>
+            <returns>
+            Enumerator to a list of components.
+            </returns>
+        </member>
+        <member name="M:Almirante.Entities.Entity.Kill">
+            <summary>
+            Marks the current entity for removal in the next update.
+            </summary>
+        </member>
+        <member name="M:Almirante.Entities.Entity.Create">
+            <summary>
+            Creates this instance.
+            </summary>
+        </member>
+        <member name="M:Almirante.Entities.Entity.OnCreate">
+            <summary>
+            Entity has been created and added to the manager.
+            </summary>
+        </member>
+        <member name="M:Almirante.Entities.Entity.Destroy">
+            <summary>
+            Destroys this instance.
+            </summary>
+        </member>
+        <member name="M:Almirante.Entities.Entity.OnDestroy">
+            <summary>
+            Called when the entity is getting destroyed by the manager.
+            </summary>
+        </member>
+        <member name="M:Almirante.Entities.Entity.Draw">
+            <summary>
+            Draws the entity.
+            </summary>
+        </member>
+        <member name="M:Almirante.Entities.Entity.CompareTo(Almirante.Entities.Entity)">
+            <summary>
+            Compares the current object with another object of the same info.
+            </summary>
+            <param name="other">An object to compare with this object.</param>
+            <returns>
+            A 32-bit signed integer that indicates the relative order of the objects being compared. The return value has the following meanings:
+            Value
+            Meaning
+            Less than zero
+            This object is less than the <paramref name="other" /> parameter.
+            Zero
+            This object is equal to <paramref name="other" />.
+            Greater than zero
+            This object is greater than <paramref name="other" />.
+            </returns>
+        </member>
+        <member name="P:Almirante.Entities.Entity.Id">
+            <summary>
+            Gets the entity's id.
+            </summary>
+        </member>
+        <member name="P:Almirante.Entities.Entity.Type">
+            <summary>
+            Gets the entity info information.
+            </summary>
+        </member>
+        <member name="P:Almirante.Entities.Entity.Dead">
+            <summary>
+            Gets or sets a value indicating whether this <see cref="T:Almirante.Entities.Entity"/> is dead.
+            </summary>
+            <value>
+              <c>true</c> if enabled; otherwise, <c>false</c>.
+            </value>
+        </member>
+        <member name="P:Almirante.Entities.Entity.ComponentMask">
+            <summary>
+            Component mapper.
+            </summary>
+        </member>
+        <member name="P:Almirante.Entities.Entity.Manager">
+            <summary>
+            Gets entity manager instance that holds this entity.
+            </summary>
+        </member>
+        <member name="P:Almirante.Entities.Entity.Position">
+            <summary>
+            Gets or sets the entity's position.
+            </summary>
+            <value>
+            The position.
+            </value>
+        </member>
+        <member name="P:Almirante.Entities.Entity.Tag">
+            <summary>
+            Gets or sets the tag.
+            </summary>
+            <value>
+            The tag.
+            </value>
+        </member>
+        <member name="P:Almirante.Entities.Entity.Group">
+            <summary>
+            Gets or sets the group.
+            </summary>
+            <value>
+            The group.
+            </value>
+        </member>
+        <member name="T:Almirante.Entities.Filters.Filter">
+            <summary>
+            Filter class.
+            </summary>
+        </member>
+        <member name="F:Almirante.Entities.Filters.Filter.rules">
+            <summary>
+            List of rules to this filter.
+            </summary>
+        </member>
+        <member name="M:Almirante.Entities.Filters.Filter.#ctor">
+            <summary>
+            Filter constructor.
+            </summary>
+        </member>
+        <member name="M:Almirante.Entities.Filters.Filter.Apply(Almirante.Entities.Entity)">
+            <summary>
+            Applies the filter to an entity.
+            </summary>
+            <param name="entity">Entity instance.</param>
+            <returns>True if all rules passes.</returns>
+        </member>
+        <member name="M:Almirante.Entities.Filters.Filter.Is(System.Type)">
+            <summary>
+            Filters entities of the specified type.
+            </summary>
+            <param name="type">The type.</param>
+            <returns>This instance.</returns>
+        </member>
+        <member name="M:Almirante.Entities.Filters.Filter.IsNot(System.Type[])">
+            <summary>
+            Filters entities that is not the specified type.
+            </summary>
+            <param name="type">The type.</param>
+            <returns>This instance.</returns>
+        </member>
+        <member name="M:Almirante.Entities.Filters.Filter.IsAny(System.Type[])">
+            <summary>
+            Filters entities that has any of the specified components.
+            </summary>
+            <param name="type">The type.</param>
+            <returns>This instance.</returns>
+        </member>
+        <member name="M:Almirante.Entities.Filters.Filter.Has(System.Type[])">
+            <summary>
+            Filters entities that has the specified components.
+            </summary>
+            <param name="types">The types.</param>
+            <returns>This instance.</returns>
+        </member>
+        <member name="M:Almirante.Entities.Filters.Filter.HasAny(System.Type[])">
+            <summary>
+            Filters entities that has any of the specified components.
+            </summary>
+            <param name="types">The types.</param>
+            <returns>This instance.</returns>
+        </member>
+        <member name="M:Almirante.Entities.Filters.Filter.HasNot(System.Type[])">
+            <summary>
+            Filters entities that doesn't have the specified types.
+            </summary>
+            <param name="types">The types.</param>
+            <returns>This instance.</returns>
+        </member>
+        <member name="M:Almirante.Entities.Filters.Filter.TaggedAs(System.String)">
+            <summary>
+            Filters entities that has been tagged with the specified value.
+            </summary>
+            <param name="tag">The tag.</param>
+            <returns>This instance.</returns>
+        </member>
+        <member name="M:Almirante.Entities.Filters.Filter.PartOfGroup(System.String)">
+            <summary>
+            Filters entities that has been grouped with the specified value.
+            </summary>
+            <param name="group">The group.</param>
+            <returns>
+            This instance.
+            </returns>
+        </member>
+        <member name="M:Almirante.Entities.Filters.Filter.Create">
+            <summary>
+            Creates a filter instance.
+            </summary>
+            <returns>New filter instance.</returns>
+        </member>
+        <member name="T:Almirante.Entities.EntityManager">
+            <summary>
+            Entity management class.
+            </summary>
+        </member>
+        <member name="F:Almirante.Entities.EntityManager.id">
+            <summary>
+            Current entity id.
+            </summary>
+        </member>
+        <member name="F:Almirante.Entities.EntityManager.initialized">
+            <summary>
+            Stores if the entity manager has been initialized.
+            </summary>
+        </member>
+        <member name="F:Almirante.Entities.EntityManager.emptyList">
+            <summary>
+            Empty list of entities.
+            </summary>
+        </member>
+        <member name="F:Almirante.Entities.EntityManager.addedEntities">
+            <summary>
+            Stores the unused entity ids.
+            </summary>
+        </member>
+        <member name="F:Almirante.Entities.EntityManager.entities">
+            <summary>
+            Stores a list of entities.
+            </summary>
+        </member>
+        <member name="F:Almirante.Entities.EntityManager.entitiesByType">
+            <summary>
+            Stores a list of entities.
+            </summary>
+        </member>
+        <member name="F:Almirante.Entities.EntityManager.entitiesByGroup">
+            <summary>
+            The entities by group.
+            </summary>
+        </member>
+        <member name="F:Almirante.Entities.EntityManager.entitiesByTag">
+            <summary>
+            Stores a list of entities.
+            </summary>
+        </member>
+        <member name="F:Almirante.Entities.EntityManager.deadEntities">
+            <summary>
+            Stores a list of dead entities.
+            </summary>
+        </member>
+        <member name="M:Almirante.Entities.EntityManager.#ctor">
+            <summary>
+            Constructor.
+            </summary>
+        </member>
+        <member name="M:Almirante.Entities.EntityManager.Initialize">
+            <summary>
+            Initializes the entity manager.
+            </summary>
+        </member>
+        <member name="M:Almirante.Entities.EntityManager.GetEntity(System.UInt64)">
+            <summary>
+            Gets an entity by its id.
+            </summary>
+            <param name="id">The id.</param>
+            <returns>Entity instance.</returns>
+        </member>
+        <member name="M:Almirante.Entities.EntityManager.GetEntity(System.String)">
+            <summary>
+            Gets an entity by its tag name.
+            </summary>
+            <param name="tag">The tag.</param>
+            <returns>Entity instance.</returns>
+        </member>
+        <member name="M:Almirante.Entities.EntityManager.GetEntities(System.String)">
+            <summary>
+            Gets all entities that belongs to the specified group.
+            </summary>
+            <param name="group">The group.</param>
+            <returns>Enumeration of the entities.</returns>
+        </member>
+        <member name="M:Almirante.Entities.EntityManager.Update(System.Double)">
+            <summary>
+            Updates the entity manager.
+            </summary>
+            <param name="time">The time elapsed time in <c>seconds</c>.</param>
+        </member>
+        <member name="M:Almirante.Entities.EntityManager.Draw">
+            <summary>
+            Draws the entities.
+            </summary>
+            <param name="batch">The batch.</param>
+        </member>
+        <member name="M:Almirante.Entities.EntityManager.CreateId">
+            <summary>
+            Creates a free entity id.
+            </summary>
+            <returns>New entity id.</returns>
+        </member>
+        <member name="M:Almirante.Entities.EntityManager.Create``1(System.String,System.String)">
+            <summary>
+            Creates a determined entity info.
+            </summary>
+            <typeparam name="T">Type of the entity.</typeparam>
+            <param name="tag">The tag.</param>
+            <param name="group">The group.</param>
+            <returns>
+            New entity instance.
+            </returns>
+        </member>
+        <member name="M:Almirante.Entities.EntityManager.RemoveEntity(Almirante.Entities.Entity)">
+            <summary>
+            Removes the specified entity from the manager
+            </summary>
+            <param name="entity">The entity.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Almirante.Entities.EntityManager.KillEntity(Almirante.Entities.Entity)">
+            <summary>
+            Kills an entity.
+            </summary>
+            <param name="entity">Entity instance.</param>
+        </member>
+        <member name="M:Almirante.Entities.EntityManager.Clear">
+            <summary>
+            Clears all entities from the entity manager.
+            </summary>
+        </member>
+        <member name="P:Almirante.Entities.EntityManager.Systems">
+            <summary>
+            System management class.
+            </summary>
+        </member>
+    </members>
+</doc>

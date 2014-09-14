@@ -1,0 +1,119 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Almirante.Pipeline</name>
+    </assembly>
+    <members>
+        <member name="T:Almirante.Pipeline.Common.CustomXmlContent">
+            <summary>
+            Custom XML Content class
+            </summary>
+        </member>
+        <member name="M:Almirante.Pipeline.Common.CustomXmlContent.#ctor(System.String,System.String)">
+            <summary>
+            Constructor.
+            </summary>
+            <param name="filename">File path</param>
+            <param name="content">Contents</param>
+        </member>
+        <member name="P:Almirante.Pipeline.Common.CustomXmlContent.Filename">
+            <summary>
+            File name
+            </summary>
+        </member>
+        <member name="P:Almirante.Pipeline.Common.CustomXmlContent.Content">
+            <summary>
+            File contents
+            </summary>
+        </member>
+        <member name="T:Almirante.Pipeline.Fonts.BitmapFontContent">
+            <summary>
+            Hold the data read from a Fonts xml.
+            </summary>
+        </member>
+        <member name="M:Almirante.Pipeline.Fonts.BitmapFontContent.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Almirante.Pipeline.Fonts.BitmapFontContent"/> class.
+            </summary>
+        </member>
+        <member name="P:Almirante.Pipeline.Fonts.BitmapFontContent.Characters">
+            <summary>
+            Gets or sets the characters dictionary.
+            </summary>
+            <value>
+            The characters.
+            </value>
+        </member>
+        <member name="P:Almirante.Pipeline.Fonts.BitmapFontContent.FontSize">
+            <summary>
+            Gets or sets the size of the font.
+            </summary>
+            <value>
+            The size of the font.
+            </value>
+        </member>
+        <member name="P:Almirante.Pipeline.Fonts.BitmapFontContent.HorizontalGap">
+            <summary>
+            Gets or sets the horizontal text padding.
+            </summary>
+            <value>
+            The padding.
+            </value>
+        </member>
+        <member name="P:Almirante.Pipeline.Fonts.BitmapFontContent.VerticalGap">
+            <summary>
+            Gets or sets the vertical gap.
+            </summary>
+            <value>
+            The vertical gap.
+            </value>
+        </member>
+        <member name="P:Almirante.Pipeline.Fonts.BitmapFontContent.Offset">
+            <summary>
+            Gets or sets the offset.
+            </summary>
+        </member>
+        <member name="P:Almirante.Pipeline.Fonts.BitmapFontContent.Texture">
+            <summary>
+            Gets or sets the texture.
+            </summary>
+            <value>
+            The texture.
+            </value>
+        </member>
+        <member name="P:Almirante.Pipeline.Fonts.BitmapFontContent.Color">
+            <summary>
+            Gets or sets the text color.
+            </summary>
+            <value>
+            The color.
+            </value>
+        </member>
+        <member name="T:Almirante.Pipeline.Fonts.BitmapFontImporter">
+            <summary>
+            Custom content importer for loading .bitmapfont font files.
+            </summary>
+        </member>
+        <member name="M:Almirante.Pipeline.Fonts.BitmapFontImporter.Import(System.String,Microsoft.Xna.Framework.Content.Pipeline.ContentImporterContext)">
+            <summary>
+            Imports the specified filename.
+            </summary>
+            <param name="filename">The filename.</param>
+            <param name="context">The context.</param>
+            <returns></returns>
+        </member>
+        <member name="T:Almirante.Pipeline.Fonts.BitmapFontProcessor">
+            <summary>
+            Custom content processor for loading data and texture for the bitmapfont.
+            </summary>
+        </member>
+        <member name="M:Almirante.Pipeline.Fonts.BitmapFontProcessor.Process(Almirante.Pipeline.Common.CustomXmlContent,Microsoft.Xna.Framework.Content.Pipeline.ContentProcessorContext)">
+            <summary>
+            Processes the specified input.
+            </summary>
+            <param name="input">The input.</param>
+            <param name="context">The context.</param>
+            <returns></returns>
+        </member>
+    </members>
+</doc>
