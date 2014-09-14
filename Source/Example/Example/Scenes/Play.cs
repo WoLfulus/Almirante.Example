@@ -67,15 +67,23 @@ namespace Example.Scenes
             // Registers the systems to be used by this manager
             this.entities.Systems.Add<ControlSystem>();
             this.entities.Systems.Add<CameraSystem>();
+            this.entities.Systems.Add<HealthRegenSystem>();
+            this.entities.Systems.Add<ManaRegenSystem>();
+            this.entities.Systems.Add<FlashingSystem>();
 
             // Creates the player with tag "player" so the systems can find the entity
             this.player = this.entities.Create<Player>("player");
             this.player.Name.Text = "você";
             this.player.Name.Color = Color.White;
-            this.player.Health.Value = 30;
-            this.player.Health.Maximum = 100;
-            this.player.Mana.Value = 10;
-            this.player.Mana.Maximum = 100;
+
+            this.player.Health.Value = 300;
+            this.player.Health.Maximum = 1000;
+            this.player.HealthRegen.Value = 46;
+
+            this.player.Mana.Value = 220;
+            this.player.Mana.Maximum = 1000;
+            this.player.ManaRegen.Value = 22;
+
             this.player.Visual.File = "Characters\\Player";
             this.player.Position.X = 0;
             this.player.Position.Y = 0;

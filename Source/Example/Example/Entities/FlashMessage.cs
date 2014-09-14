@@ -9,65 +9,35 @@ using System.Text;
 namespace Example.Entities
 {
     /// <summary>
-    /// Player entity
+    /// Entity used to display regen information on screen.
     /// </summary>
-    public class Player : Entity
+    public class FlashMessage : Entity
     {
         /// <summary>
-        /// Name of this player
+        /// Text
         /// </summary>
         [Component]
-        public NameComponent Name
+        public FlashComponent Content
         {
             get;
             set;
         }
 
         /// <summary>
-        /// Texture of this player
+        /// Movement
         /// </summary>
         [Component]
-        public VisualComponent Visual
+        public MovementComponent Movement
         {
             get;
             set;
         }
 
         /// <summary>
-        /// Player health
+        /// Message fading
         /// </summary>
         [Component]
-        public HealthComponent Health
-        {
-            get;
-            set;
-        }
-
-        /// <summary>
-        /// Player health regen
-        /// </summary>
-        [Component]
-        public HealthRegenComponent HealthRegen
-        {
-            get;
-            set;
-        }
-
-        /// <summary>
-        /// Player health
-        /// </summary>
-        [Component]
-        public ManaComponent Mana
-        {
-            get;
-            set;
-        }
-
-        /// <summary>
-        /// Player health
-        /// </summary>
-        [Component]
-        public ManaRegenComponent ManaRegen
+        public FadeComponent Fade
         {
             get;
             set;

@@ -49,7 +49,7 @@ namespace Example.Entities.Components
         /// <summary>
         /// Bar size
         /// </summary>
-        private const int BarSize = 30;
+        private const int BarSize = 32;
         private const int DrawOffset = 5;
 
         /// <summary>
@@ -93,7 +93,7 @@ namespace Example.Entities.Components
 
             SpriteBatch batch = AlmiranteEngine.Batch;
             batch.DrawLine(this.position.X - (BarSize / 2), this.position.Y + DrawOffset, this.position.X + (BarSize / 2), this.position.Y + DrawOffset, Color.Black, 4);
-            batch.DrawLine(this.position.X - (BarSize / 2) + 1, this.position.Y + DrawOffset + 1, this.position.X - (BarSize / 2) + ((BarSize - 4) * percent), this.position.Y + DrawOffset + 1, color, 2);
+            batch.DrawLine(this.position.X - (BarSize / 2) + 1, this.position.Y + DrawOffset + 1, this.position.X - (BarSize / 2) + (BarSize * percent) - 1, this.position.Y + DrawOffset + 1, color, 2);
         }
     }
 }
