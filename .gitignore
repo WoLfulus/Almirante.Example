@@ -3,3 +3,5 @@
 /Source/Example/Example/obj
 /Source/Example/ExampleContent/obj
 /Source/Example/ExampleContent/bin
+/Source/Example/Example/*.cachefile
+/Source/Example/Example/*.user
