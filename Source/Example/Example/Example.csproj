@@ -79,6 +79,8 @@
     <Reference Include="System.Net" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Entities\Components\ManaComponent.cs" />
+    <Compile Include="Entities\Components\HealthComponent.cs" />
     <Compile Include="Entities\Components\NameComponent.cs" />
     <Compile Include="Entities\Components\VisualComponent.cs" />
     <Compile Include="Entities\Player.cs" />

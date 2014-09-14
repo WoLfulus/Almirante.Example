@@ -72,6 +72,10 @@ namespace Example.Scenes
             this.player = this.entities.Create<Player>("player");
             this.player.Name.Text = "Você";
             this.player.Name.Color = Color.White;
+            this.player.Health.Value = 80;
+            this.player.Health.Maximum = 100;
+            this.player.Mana.Value = 25;
+            this.player.Mana.Maximum = 100;
             this.player.Visual.File = "Characters\\Player";
             this.player.Position.X = 0;
             this.player.Position.Y = 0;

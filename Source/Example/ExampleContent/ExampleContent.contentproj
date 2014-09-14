@@ -47,6 +47,11 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Fonts\Regen.spritefont">
+      <Name>Regen</Name>
+      <Importer>FontDescriptionImporter</Importer>
+      <Processor>FontDescriptionProcessor</Processor>
+    </Compile>
     <None Include="Fonts\Font.png">
       <Name>Font</Name>
       <Importer>TextureImporter</Importer>

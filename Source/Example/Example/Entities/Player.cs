@@ -33,6 +33,26 @@ namespace Example.Entities
             set;
         }
 
+        /// <summary>
+        /// Player health
+        /// </summary>
+        [Component]
+        public HealthComponent Health
+        {
+            get;
+            set;
+        }
+
+        /// <summary>
+        /// Player health
+        /// </summary>
+        [Component]
+        public ManaComponent Mana
+        {
+            get;
+            set;
+        }
+
         protected override void OnCreate()
         {
         }
