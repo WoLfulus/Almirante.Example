@@ -15,8 +15,6 @@ namespace Example.Entities.Components
     /// </summary>
     public class ManaComponent : DrawableComponent
     {
-#pragma warning disable 0649
-
         /// <summary>
         /// In order to draw the components into the screen,
         /// we must access the position component of the entity.
@@ -24,9 +22,7 @@ namespace Example.Entities.Components
         /// and the engine will inject the instance into this component.
         /// </summary>
         [ComponentReference]
-        private PositionComponent position;
-
-#pragma warning restore 0649
+        private PositionComponent position = null;
 
         /// <summary>
         /// Current health
@@ -41,6 +37,15 @@ namespace Example.Entities.Components
         /// Maximum health
         /// </summary>
         public float Maximum
+        {
+            get;
+            set;
+        }
+
+        /// <summary>
+        /// Regeneration
+        /// </summary>
+        public float Regen
         {
             get;
             set;

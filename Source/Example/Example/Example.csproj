@@ -80,9 +80,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Entities\Components\FadeComponent.cs" />
-    <Compile Include="Entities\Components\MovementComponent.cs" />
-    <Compile Include="Entities\Components\ManaRegenComponent.cs" />
-    <Compile Include="Entities\Components\HealthRegenComponent.cs" />
+    <Compile Include="Entities\Components\DislocationComponent.cs" />
     <Compile Include="Entities\Components\ManaComponent.cs" />
     <Compile Include="Entities\Components\HealthComponent.cs" />
     <Compile Include="Entities\Components\NameComponent.cs" />

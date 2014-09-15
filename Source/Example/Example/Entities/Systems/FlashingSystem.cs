@@ -18,7 +18,7 @@ namespace Example.Entities.Systems
         /// Flashing system
         /// </summary>
         public FlashingSystem()
-            : base(Filter.Create().PartOfGroup("flashmessage"))
+            : base(Filter.Create().Is(typeof(FlashMessage)))
         {
         }
 
@@ -32,16 +32,15 @@ namespace Example.Entities.Systems
             if (message != null)
             {
                 message.Fade.Tweener.Update(AlmiranteEngine.Time.Frame);
-                message.Movement.Tweener.Update(AlmiranteEngine.Time.Frame);
-                if (message.Movement.Tweener.IsFinished)
+                if (message.Fade.Tweener.IsFinished)
                 {
-                    entity.Kill(); // if movement has finished, kill the entity
+                    entity.Kill();
+                    return;
                 }
-                else
-                {
-                    message.Position.X = message.Movement.Tweener.Value.X;
-                    message.Position.Y = message.Movement.Tweener.Value.Y;
-                }
+
+                message.Dislocation.Tweener.Update(AlmiranteEngine.Time.Frame);
+                message.Position.X = message.Dislocation.Tweener.Value.X;
+                message.Position.Y = message.Dislocation.Tweener.Value.Y;
             }
         }
     }

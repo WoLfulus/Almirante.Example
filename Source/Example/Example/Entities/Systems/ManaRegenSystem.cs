@@ -4,6 +4,7 @@ using Almirante.Entities.Filters;
 using Almirante.Entities.Systems;
 using Almirante.Entities.Systems.Multithreaded;
 using Example.Entities.Components;
+using Microsoft.Xna.Framework;
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
@@ -23,11 +24,16 @@ namespace Example.Entities.Systems
         private double nextRegen = 0f;
 
         /// <summary>
+        /// Random generator
+        /// </summary>
+        private Random random = new Random(Environment.TickCount);
+
+        /// <summary>
         /// Mana regenerators.
         /// This system will filter all entities that are composed of both mana, and mana regen components.
         /// </summary>
         public ManaRegenSystem()
-            : base(Filter.Create().Has(typeof(ManaComponent), typeof(ManaRegenComponent)))
+            : base(Filter.Create().Has(typeof(ManaComponent)))
         {
         }
 
@@ -38,23 +44,28 @@ namespace Example.Entities.Systems
         protected override void Process(Entity entity)
         {
             var mana = entity.GetComponent<ManaComponent>();
-            var regen = entity.GetComponent<ManaRegenComponent>();
 
             if (mana.Value >= mana.Maximum)
             {
                 return;
             }
 
-            var dif = regen.Value;
-            if (mana.Value + regen.Value > mana.Maximum)
+            var dif = mana.Regen;
+            if (mana.Value + mana.Regen > mana.Maximum)
             {
                 dif = mana.Maximum - mana.Value;
             }
 
             mana.Value += dif;
 
-            Debug.WriteLine("Regenerate " + dif + " mana.");
-            // Create information entity
+            var message = entity.Manager.Create<FlashMessage>();
+            message.Position.X = entity.Position.X + 35;
+            message.Position.Y = entity.Position.Y + 5;
+            message.Fade.Time = 2;
+            message.Dislocation.Time = 2;
+            message.Dislocation.Finish = new Vector2(entity.Position.X + 35 + random.Next(10, 20), entity.Position.Y + 5 + random.Next(10, 20));
+            message.Content.Color = Color.LightBlue;
+            message.Content.Value = "+" + ((int)dif).ToString();
         }
 
         /// <summary>

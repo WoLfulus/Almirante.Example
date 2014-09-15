@@ -27,7 +27,7 @@ namespace Example.Entities
         /// Movement
         /// </summary>
         [Component]
-        public MovementComponent Movement
+        public DislocationComponent Dislocation
         {
             get;
             set;

@@ -44,30 +44,10 @@ namespace Example.Entities
         }
 
         /// <summary>
-        /// Player health regen
-        /// </summary>
-        [Component]
-        public HealthRegenComponent HealthRegen
-        {
-            get;
-            set;
-        }
-
-        /// <summary>
         /// Player health
         /// </summary>
         [Component]
         public ManaComponent Mana
-        {
-            get;
-            set;
-        }
-
-        /// <summary>
-        /// Player health
-        /// </summary>
-        [Component]
-        public ManaRegenComponent ManaRegen
         {
             get;
             set;

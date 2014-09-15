@@ -24,11 +24,16 @@ namespace Example.Entities.Systems
         private double nextRegen = 0f;
 
         /// <summary>
+        /// Random generator
+        /// </summary>
+        private Random random = new Random(Environment.TickCount);
+
+        /// <summary>
         /// Health regenerators.
         /// This system will filter all entities that are composed of both health, and health regen components.
         /// </summary>
         public HealthRegenSystem()
-            : base(Filter.Create().Has(typeof(HealthComponent), typeof(HealthRegenComponent)))
+            : base(Filter.Create().Has(typeof(HealthComponent)))
         {
         }
 
@@ -39,31 +44,25 @@ namespace Example.Entities.Systems
         protected override void Process(Entity entity)
         {
             var health = entity.GetComponent<HealthComponent>();
-            var regen = entity.GetComponent<HealthRegenComponent>();
-
             if (health.Value >= health.Maximum)
             {
                 return;
             }
 
-            var dif = regen.Value;
-            if (health.Value + regen.Value > health.Maximum)
+            var dif = health.Regen;
+            if (health.Value + health.Regen > health.Maximum)
             {
                 dif = health.Maximum - health.Value;
             }
 
             health.Value += dif;
 
-            var message = entity.Manager.Create<FlashMessage>(null, "flashmessage");
-
-            message.Position.X = entity.Position.X + 20;
-            message.Position.Y = entity.Position.Y - 32;
-            
+            var message = entity.Manager.Create<FlashMessage>();
+            message.Position.X = entity.Position.X + 35;
+            message.Position.Y = entity.Position.Y + 0;
             message.Fade.Time = 2;
-           
-            message.Movement.Time = 2;
-            message.Movement.Finish = new Vector2(entity.Position.X + 20, entity.Position.Y - 52);
-
+            message.Dislocation.Time = 2;
+            message.Dislocation.Finish = new Vector2(entity.Position.X + 35 + random.Next(10, 20), entity.Position.Y - random.Next(10, 20));
             message.Content.Color = Color.GreenYellow;
             message.Content.Value = "+" + ((int) dif).ToString();
         }

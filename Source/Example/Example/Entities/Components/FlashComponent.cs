@@ -21,13 +21,13 @@ namespace Example.Entities.Components
         /// We need a position to draw the text
         /// </summary>
         [ComponentReference]
-        private PositionComponent position;
+        private PositionComponent position = null;
 
         /// <summary>
         /// We need a position to draw the text
         /// </summary>
         [ComponentReference]
-        private FadeComponent fade;
+        private FadeComponent fade = null;
 
         /// <summary>
         /// Font

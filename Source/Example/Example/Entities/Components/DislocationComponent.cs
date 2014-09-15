@@ -12,10 +12,13 @@ namespace Example.Entities.Components
     /// <summary>
     /// Fade component
     /// </summary>
-    public class MovementComponent : Component
+    public class DislocationComponent : Component
     {
+        /// <summary>
+        /// Reference to position
+        /// </summary>
         [ComponentReference]
-        private PositionComponent position;
+        private PositionComponent position = null;
 
         /// <summary>
         /// 

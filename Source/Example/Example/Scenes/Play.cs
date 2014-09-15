@@ -46,7 +46,7 @@ namespace Example.Scenes
             var device = AlmiranteEngine.Device;
             this.background = new Texture2D(device, 1, 1);
             this.background.SetData(new Color[] { Color.FromNonPremultiplied(0, 0, 0, 255) });
-            this.map = AlmiranteEngine.Resources.LoadSync<Texture2D>("Map\\Map");
+            this.map = AlmiranteEngine.Resources.LoadSync<Texture2D>("Objects\\Back");
         }
 
         /// <summary>
@@ -78,11 +78,11 @@ namespace Example.Scenes
 
             this.player.Health.Value = 300;
             this.player.Health.Maximum = 1000;
-            this.player.HealthRegen.Value = 46;
+            this.player.Health.Regen = 46;
 
             this.player.Mana.Value = 220;
             this.player.Mana.Maximum = 1000;
-            this.player.ManaRegen.Value = 22;
+            this.player.Mana.Regen = 22;
 
             this.player.Visual.File = "Characters\\Player";
             this.player.Position.X = 0;
